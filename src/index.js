@@ -15,7 +15,7 @@ function take(num) {
     return function* (gen) {
         let cur = 0;
         for (let i of gen) {
-            if (++cur < num) {
+            if (++cur <= num) {
                 yield i;
             } else {
                 return;
